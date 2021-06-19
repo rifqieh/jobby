@@ -9,26 +9,22 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget buildTitle() {
-      return Container(
-        margin: EdgeInsets.only(top: 106),
-        child: Text(
-          'Welcome!\nPlease sign up now',
-          style: blackTextStyle.copyWith(
-            fontSize: 24,
-            fontWeight: bold,
-          ),
-        ),
-      );
-    }
-
     return Scaffold(
       body: ListView(
         padding: EdgeInsets.symmetric(
           horizontal: defaultMargin,
         ),
         children: [
-          buildTitle(),
+          Container(
+            margin: EdgeInsets.only(top: 106),
+            child: Text(
+              'Welcome!\nPlease sign up now',
+              style: blackTextStyle.copyWith(
+                fontSize: 24,
+                fontWeight: bold,
+              ),
+            ),
+          ),
           SizedBox(
             height: 20,
           ),
