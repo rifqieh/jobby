@@ -4,8 +4,8 @@ import 'package:jobby/widgets/custom_image_button.dart';
 import 'package:jobby/widgets/custom_text_button.dart';
 import 'package:jobby/widgets/custom_field.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class SignUpPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 106),
             child: Text(
-              'Welcome!\nPlease sign up now',
+              'Welcome!\nPlease sign in now',
               style: blackTextStyle.copyWith(
                 fontSize: 24,
                 fontWeight: bold,
@@ -29,10 +29,6 @@ class SignUpPage extends StatelessWidget {
             height: 20,
           ),
           CustomField(
-            iconUrl: 'assets/icon_name.png',
-            hint: 'Fullname',
-          ),
-          CustomField(
             iconUrl: 'assets/icon_email.png',
             hint: 'Email',
           ),
@@ -40,9 +36,22 @@ class SignUpPage extends StatelessWidget {
             iconUrl: 'assets/icon_password.png',
             hint: 'Password',
           ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Text(
+                'Forgot Password?',
+                style: blackTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
+              ),
+            ),
+          ),
           CustomTextButton(
             title: 'Register',
-            margin: EdgeInsets.only(top: 30),
+            margin: EdgeInsets.only(top: 74),
           ),
           Center(
             child: Container(
@@ -70,14 +79,14 @@ class SignUpPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Already have an account? ',
+                  'Don\'t have an account? ',
                   style: blackTextStyle.copyWith(
                     fontSize: 16,
                     fontWeight: semiBold,
                   ),
                 ),
                 Text(
-                  'Sign in',
+                  'Sign up',
                   style: blueTextStyle.copyWith(
                     fontSize: 16,
                     fontWeight: semiBold,
